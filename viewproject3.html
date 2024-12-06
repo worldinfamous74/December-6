@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<lang lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: Arial, Sans-serif;
+        background-color: #312d2d;
+        color: #1c97dfef;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem, 1rem;
+        background-color: #4ebbbead;
+    }
+
+
+    .banner h1{
+        font-size: 3em;
+        color: #fff;
+        margin-bottom: 0.5em;
+    }
+
+    .products{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+        gap: 2em;
+        padding: 2em;
+    }
+
+    .product-card{
+        background-color: #4d4c3ecb;
+        border-radius: 8px;
+        padding: 1.5em;
+        text-align: center;
+        box-shadow: 0 4px 8px
+        rgba(0, 0, 0, 0, 3);
+    }
+    
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product-card h2{
+        margin-top: 1em;
+        font-size: 1.5em;
+    }
+
+    .product-card p{
+        margin: 0.5em 0;
+    }
+
+    .product-card button{
+        background-color: #1cb2b8c4;
+        color: #fff;
+        padding: 0.8em 1.5em;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .product-card button:hover{
+        background-color: rgba(221, 147, 209, 0.692);
+    }
+
+    .footer{
+        text-align: center;
+        padding: 1em;
+        background-color: #333;
+        margin-top: 2em;
+        font-size: 0.9em;
+    }
+</style>
+<body>
+    <h3><a href="index.html"><= Back Home</a></h2>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Cart</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <header class="banner">
+        <h1>Nike E-commerce</h1>
+        <p>Find the best sportswear at unbeatable prices</p>
+    </header>
+
+    <section class="products">
+        <div class="product-card">
+            <img src="Img4/Shoe3.jpg"">
+            <h2>Nike Air Max</h2>
+            <p>$100</p>
+            <button onclick="purchase('prod_xxxx2')">Buy Now</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="Img4/Shoe5.jpg"> 
+            <h2> Converse Shoe</h2>
+            <p>$200</p>
+            <button onclick="purchase('prod_xxxx1')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Img4/Shoe4.jpg"> 
+            <h2>Nike SB</h2>
+            <p>$150</p>
+            <button onclick="purchase('prod_xxxx1')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Img4/Shoe2.jpg"> 
+            <h2>Nike All Low</h2>
+            <p>$75</p>
+            <button onclick="purchase('prod_xxxx1')">Buy Now</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+       <p>&copy; 2024 Nike E-commerce Store.
+        All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+    <script>
+        const stripe = stripe
+        ("YOUR_STRIPE_PIBLIC_KEY")
+        function purchase(productId)
+        {
+        fetch("/create-checkout-session", {
+            method: "POST",
+            headers: {
+                  "Content-Type":
+                  "application/json"
+            },
+            body: JSON.stringify
+            ({productId:
+            productId})
+        })
+        .then(response =>
+            response.json())
+        .then(session =>    {
+                return stripe
+                .redirectToCheckout
+                ({ sessionId:
+                session.id});
+        })
+        .then(result => {
+            if (result.error) {
+                alert(result
+                .error. message);
+            }
+        })
+        .catch(error =>console.error("Error:",error))
+    </script>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Portfolio </title>
+</head>
+<style>
+    /* General Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        background: #f9f9f9f6;
+        color: #333333;
+    }
+
+
+    img{
+        width: 250px;
+        height:350px;
+    }
+
+    
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Header Section */
+    header {
+        background: #2b7199;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    nav {
+        margin-top: 50px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        font-size: 1rem;
+        color: #fff;
+        transition: color 0.10s;
+    }
+
+    nav a:hover {
+        color: #992020;
+    }
+
+    /* About Section */
+    #about {
+        padding: 50px 20px;
+        text-align: center;
+        background: rgba(155, 199, 202, 0.521);
+        margin: 20px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+        color: #136594;
+        margin-bottom: 20px;
+    }
+
+    #about p {
+        font-size: 2.2rem;
+    }
+
+    /* Projects Section */
+    #projects {
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #projects h2 {
+        text-align: center;
+        color: #204c9e;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .project {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        min-width: 250px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+        color: #0179c957;
+        margin-bottom: 10px;
+    }
+
+    .project p {
+        margin-bottom: 15px;
+    }
+
+    .project a {
+        color: #4caf50;
+        font-weight: bold;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 50px 20px;
+        text-align: center;
+        background: white;
+        margin: 20px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+    }
+
+    #contact h2 {
+        color: #41ca9cd8;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    #contact ul {
+        list-style: none;
+    }
+
+    #contact li {
+        margin: 10px 0;
+    }
+
+    #contact a {
+        color: #41ca9cd8;
+        font-weight: bold;
+    }
+
+    /* Footer Section */
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .project-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Samuel</h1>
+        <p>Web Developer | Designer | Programmer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! 
+            <br>
+            <img src="Img/Samuel.jpg" alt="Samuel"
+            <br>
+            <br>
+            I'm Samuel, a passionate web developer specializing in creating
+             modern and responsive websites.
+             I am cirrently enrolled into <strong>ALT school Africa</strong>
+              with the aspirations of becoming a Cloud Engineer.
+              <br>
+              But for now,
+              I strive to deliver seamless user experiences through 
+              clean and efficient code.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>A modern Food supply website portfolio built with HTML and CSS.</p>
+                <a href="viewproject1.html">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>A JavaScript-based Digital Clock app</p>
+                <a href="viewproject2.html">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>  A responsive E-commerce template with interactive product filters.</p>
+                <a href="viewproject3.html">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any questions, feel free to reach out:</p>
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="42" 
+                height="32" 
+                fill="#000000" 
+                viewBox="0 0 256 256"><path
+                d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16
+                ,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.4
+                3ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,
+                0l12-11.05
+                ,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z">
+                </path></svg><a href="https://mail.google.com/mail/u/0/"</a>
+                            Worldinfamous74@gmail.com
+            </li>
+            
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="32" height="32" fill="#000000" 
+                viewBox="0 0 256 256"><path
+                 d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216
+                 a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V21
+                 6ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0
+                 ,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,
+                 15.79-1.78A36,36,0,
+                0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,
+                84Z"></path></svg>
+                <a href="https://ng.linkedin.com/in/samuel-adah-147b8b279"</a>
+                            LinkedIn
+            </li>
+
+            <li> 
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="32" 
+                height="32" fill="#000000" 
+                viewBox="0 0 256 256"><path 
+                d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73
+                    .83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,
+                    0,1,200,104Z"></path></svg> <a href="https://github.com/worldinfamous74"</a>GitHub
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Samuel Adah. All rights reserved.</p>
+    </footer>
+    <h2>
+        <a href="#"</a>Back To Top</a>
+    </h2
+</body>
+</html>
